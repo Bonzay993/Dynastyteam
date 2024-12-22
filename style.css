@@ -1,0 +1,59 @@
+body {
+    margin:0 auto;
+    height:100vh;
+    
+    
+    
+}
+
+main{
+    margin:0 auto;
+    left:0;
+    top:40%;
+    background-color: rgba(250, 252, 255, 0.401);
+    height:100%;
+    align-content: center;
+    display:flex;
+    justify-content: space-between;
+    
+    
+
+    
+}
+
+.text{
+    text-align: center;
+    background-color: rgba(0, 179, 255, 0.121);
+    height:50%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 1px 0 3000px rgb(83, 124, 194);
+}
+
+.text h1{
+    font-size: 400%;
+    color:blueviolet;
+}
+
+.text p{
+    font-size:200%;
+    margin-top:4%;
+    color: rgba(14, 2, 26, 0.564);
+}
+
+.spicy-rice-regular {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.footer{
+    text-align: center;
+    color: rgba(63, 62, 62, 0.785);
+    font-size: 30%;
+}
+
+.text-container{
+    padding:5%
+}
