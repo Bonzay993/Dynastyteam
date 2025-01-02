@@ -1,46 +1,81 @@
 body {
     margin:0 auto;
-    height:100vh;
-    
-    
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    background-color: #e30f0f;
+}
+
+.main-header{
+    height:300px;
+    position: relative;
+    margin-top:1%;
+}
+
+.brand-logo {
+    position: absolute;
+    top: 50%;        /* Vertically center the logo */
+    left: 50%;       /* Horizontally center the logo */
+    transform: translate(-50%, -50%); /* Adjust the position to truly center */
+    z-index: 1;      /* Ensure it stays behind the content */
+}
+
+.brand-logo img {
+    width:60%;
+    margin-top:13%;
     
 }
 
-main{
+.main-content{
+    max-width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     margin:0 auto;
-    left:0;
-    top:40%;
-    background-color: rgba(250, 252, 255, 0.401);
-    height:100%;
-    align-content: center;
-    display:flex;
-    justify-content: space-between;
-    
-    
-
-    
-}
-
-.text{
-    text-align: center;
-    background-color: rgba(0, 179, 255, 0.121);
-    height:50%;
-    display:flex;
-    justify-content: space-between;
     flex-direction: column;
-    box-shadow: 1px 0 3000px rgb(83, 124, 194);
 }
 
-.text h1{
-    font-size: 400%;
-    color:blueviolet;
+.header-container{
+    z-index:4;
+    position: relative;
+    top:0;
+    margin:0 auto;
 }
 
-.text p{
-    font-size:200%;
-    margin-top:4%;
-    color: rgba(14, 2, 26, 0.564);
+
+
+
+.merriweather-sans {
+  font-family: "Merriweather Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
+
+.carousel-inner{
+    background-color: rgb(212, 207, 207);
+
+}
+
+.carousel{
+    width:1100px;
+}
+
+.carousel-item {
+    align-items: center;
+    align-content: center;
+    margin:0 auto;
+    
+    
+}
+
+.carousel-item img {
+    height: 240px; /* Scale image to fit carousel height */
+     /* Maintain aspect ratio */
+
+}
+
 
 .spicy-rice-regular {
     font-family: "Spicy Rice", serif;
@@ -48,12 +83,3 @@ main{
     font-style: normal;
   }
   
-.footer{
-    text-align: center;
-    color: rgba(63, 62, 62, 0.785);
-    font-size: 30%;
-}
-
-.text-container{
-    padding:5%
-}
