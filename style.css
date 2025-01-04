@@ -1,35 +1,180 @@
-body {
-    margin:0 auto;
-    min-height:100%;
-    display:flex;
-    flex-direction:column;
-   
+body, html {
+    width: 100%;
+    height: 100%; /* Ensure body and html take full height */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling on the body */
 }
 
-.brand-logo img{
-    width:800px;
+body{
+    background-image: url("./img/site-background.jpeg");
+    position: fixed;
 }
 
-.main-content{
-    max-width:60%;
+main{
+    display: flex; /* Apply Flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Distribute space between children */
+    gap: 50px; /* Add space between children */
+    width: 70%;
+    margin: 0 auto; /* Center the main container */
+    background-color: rgba(240, 248, 255, 0.263); /* Optional background color */
+    box-shadow: 5px 0 15px -4px rgba(6, 42, 85, 0.8), -5px 0 15px -4px rgba(6, 42, 85, 0.8); /* Optional shadow */
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.hero-image-container, .news-container {
+    margin: 0; /* Remove any margins to avoid interference with gap */
+}
+
+
+
+.brand-logo{
+    width:20%
+}
+
+
+.cover-container{
     display:flex;
     justify-content: space-between;
+    flex-direction:column;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    width:100%;
+    height:100%;
+    z-index:20;
+    border:1px solid rgba(0, 0, 0, 0.162);
+    min-height:100vh;
+    overflow-y: auto; /* Enable vertical scrolling for this container */
+    background: none; /* Maintain transparency or inherit background */
+    
+}
+
+.hero-image-container{
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0 auto;
     align-items: center;
     margin:0 auto;
+    width:98%;
+    height:440px;
+    border-radius: 20px;
+    align-self: center;
+    margin-top:1%;
+    border:1px solid rgb(0, 0, 0);
+    display:flex;
+    flex-direction: column;
+    
+}
+
+
+
+.cover-wrapper {
+    position: relative; /* Change from absolute to relative */
+    top: auto; /* Remove the top positioning */
+    left: auto; /* Remove the left positioning */
+    max-width: 40% !important;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 20;
+    left:20%;
+    top:10%
+}
+
+.mastfoot, .masthead{
+    width:70%;
+    align-items: center;
+    margin:0 auto;
+    box-shadow:  12px 0 15px -4px rgba(6, 42, 85, 0.8), -12px 0 15px -4px rgba(6, 42, 85, 0.8)
+}
+
+.cover-heading{
+    text-shadow:2px 2px 2px  black
+}
+
+.header-join-discord-btn{
+    background-color: rgb(10, 43, 190);
+    color:rgb(255, 255, 255);
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding:10px;
+    border:none;
+    box-shadow: 1px 1px 10px solid white !important;
+    
+}
+
+.header-join-discord-btn:hover{
+    color:white;
+    transform: scale(1.1);
+    
+
+}
+
+.top-nav{
+    display:flex;
+    justify-content: space-between;
+    padding:1%;
+}
+
+
+.cover{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    margin:0 auto;
+    
+}
+
+.news-container{
+    background-color: rgb(226, 222, 222);
+    color:rgba(39, 45, 45, 0.8);
+    border:1px solid rgba(96, 13, 221, 0.407);
+    width:98%;
+    align-self: center;
+    border-radius:15px;
+    margin-bottom:1%;
+    margin:0 auto;
+}
+
+.news{
+    display:flex;
     flex-direction: column;
 }
 
-.header-container{
-    z-index:4;
-    position: relative;
-    top:0;
+.masthead{
+    background-color: #032947;
+    position:fixed;
+    width:69.3%;
     margin:0 auto;
+    align-items: center;
+    align-self:center;
+    z-index:9999
 }
 
-.website-heading{
-    font-size: 150%;
+.mastfoot{
+    font-size: 12px;
+    background-color: rgb(19, 26, 56);
+    padding:1%;
+    z-index:20;
+    text-align: center;
+    
 }
 
+.brand-wrapper, .nav-link{
+    text-decoration: none !important;
+    color:rgb(239, 231, 231);
+}
+
+.brand-wrapper:hover, .nav-link:hover{
+    color:rgb(190, 195, 200) !important;
+}
 
 .merriweather-sans {
   font-family: "Merriweather Sans", serif;
@@ -38,26 +183,36 @@ body {
   font-style: normal;
 }
 
-
-.carousel-inner{
-    background-color: rgb(212, 207, 207);
-
+.main-carousel{
+    margin-top:100px;
 }
 
 .carousel{
-    width:1100px;
+    width:90%;
+    margin:0 auto;
 }
+
+.carousel-title{
+    margin-bottom: 2%;;
+}
+
+.carousel-inner{
+    background-color: inherit;
+    
+}
+
 
 .carousel-item {
     align-items: center;
     align-content: center;
     margin:0 auto;
+
     
     
 }
 
 .carousel-item img {
-    height: 240px; /* Scale image to fit carousel height */
+    height: 90%;; /* Scale image to fit carousel height */
      /* Maintain aspect ratio */
 
 }
