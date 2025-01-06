@@ -198,6 +198,7 @@ body{
 .news{
     display:flex;
     flex-direction: column;
+    text-shadow:2px 2px 2px  black
 }
 
 .news-heading{
