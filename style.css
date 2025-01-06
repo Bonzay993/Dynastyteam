@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     width: 100%;
     height: 100%; /* Ensure body and html take full height */
@@ -10,7 +14,8 @@ body, html {
 
 body{
     background-image: url("./img/site-background.jpeg");
-    position: fixed;
+    position: relative;
+    overflow-y: scroll;
 }
 
 .main{
@@ -22,7 +27,7 @@ body{
     margin: 0 auto; /* Center the main container */
     background-color: rgba(240, 248, 255, 0.263); /* Optional background color */
     box-shadow: 5px 0 15px -4px rgba(6, 42, 85, 0.8), -5px 0 15px -4px rgba(6, 42, 85, 0.8); /* Optional shadow */
-    margin-top:70px;
+    margin-top:60px;
     padding:20px;
 }
 
@@ -48,40 +53,48 @@ body{
     z-index:20;
     border:1px solid rgba(0, 0, 0, 0.162);
     min-height:100vh;
-    overflow-y: auto; /* Enable vertical scrolling for this container */
     background: none; /* Maintain transparency or inherit background */
     
 }
 
-.hero-image-container{
+.hero-image-container {
+    position: relative;
     background-image: url(./img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin:0 auto;
+    margin: 0 auto;
     align-items: center;
-    height:440px;
+    height: 440px;
+    min-height: 440px;
     border-radius: 20px;
     align-self: center;
-    border:1px solid rgb(0, 0, 0);
-    display:flex;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
     flex-direction: column;
-    
+    overflow: hidden; /* Ensure overlay stays within bounds */
 }
 
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.279); /* Adjust color and opacity */
+    z-index: 1; /* Place it below text */
+}
 
-
-.hero-image-text{
-    position: relative; 
-    top: auto; 
-    left: auto; 
+.hero-image-text {
+    position: relative;
+    z-index: 2; /* Ensure text is above overlay */
     max-width: 40% !important;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    z-index: 20;
-    left:20%;
-    top:10%
+    left: 20%;
+    top: 10%;
 }
 
 
@@ -150,18 +163,15 @@ body{
     flex-direction: column;
 }
 
-.youtube-embed{
-   
-}
 
 .masthead{
     background-color: #032947;
     position:fixed;
-    width:69.3%;
     margin:0 auto;
-    align-items: center;
     align-self:center;
-    z-index:9999
+    z-index:9999;
+    top:0;
+    width:69.2%
 }
 
 .mastfoot{
@@ -171,6 +181,7 @@ body{
     z-index:20;
     text-align: center;
     position:static;
+   
 }
 
 .brand-wrapper, .nav-link{

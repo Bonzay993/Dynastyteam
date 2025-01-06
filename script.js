@@ -27,6 +27,7 @@ async function getJsonData() {
               // Generate the inner HTML for the news item
               newsDiv.innerHTML = `
               <h1>${item.title}</h1>
+              <h3>${item.description}</h3>
               <div class="youtube-embed">
                   <iframe width="420" height="315" src="${item.youtube}" frameborder="0" allowfullscreen></iframe>
               </div>
