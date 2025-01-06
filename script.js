@@ -11,6 +11,7 @@ async function getJsonData() {
         const response = await fetch('./data.json');
         const jsonData = await response.json();
         const newsContainer = document.querySelector('.news-container');
+        const newsTemplate = document.getElementById('news-template');
 
         // Check if the response is successful
         if (!response.ok) {
@@ -19,21 +20,17 @@ async function getJsonData() {
 
         // Loop through each object in the JSON array
         jsonData.forEach(item => {
-            // Save each key into a variable
-            const newsDiv = document.createElement('div');
-            newsDiv.classList.add('news');
+            // Clone the template
+            const newsItem = newsTemplate.content.cloneNode(true);
 
-            // Generate the inner HTML for the news item
-            newsDiv.innerHTML = `
-                <h1>${item.title}</h1>
-                <h3>${item.description}</h3>
-                <div class="youtube-embed">
-                    <iframe width="420" height="315" src="${item.youtube}" frameborder="0" allowfullscreen></iframe>
-                </div>
-            `;
+            // Populate the template with data
+            newsItem.querySelector('.news-title').textContent = item.title;
+            newsItem.querySelector('.news-description').textContent = item.description;
+            newsItem.querySelector('iframe').src = item.youtube;
+            newsItem.querySelector('p').textContent = `Uploaded on: ${item.uploaded}`;
 
-            // Append the news div to the news-container
-            newsContainer.appendChild(newsDiv);
+            // Append the populated template to the news-container
+            newsContainer.appendChild(newsItem);
         });
     } catch (error) {
         console.error('Error fetching JSON data:', error);

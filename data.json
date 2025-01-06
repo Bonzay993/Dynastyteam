@@ -1,12 +1,14 @@
 
 [{
     "title":"First Episode" ,
-    "description":"Description bla bla bla" ,
+    "description":"Description bla bla bla asdasd as das das das das das das da sdas das das das das das das das das das da sd as das da sd asdas  asda sdas" ,
+    "uploaded":"29/05/2024",
     "youtube":"https://www.youtube.com/embed/tgbNymZ7vqY"
 },
 
 {
     "title":"Second Episode" ,
     "description":"Description bla bla bla" ,
+    "uploaded":"29/06/2024",
     "youtube":"https://www.youtube.com/embed/tgbNymZ7vqY"
 }]
