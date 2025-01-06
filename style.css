@@ -150,6 +150,10 @@ body{
     flex-direction: column;
 }
 
+.youtube-embed{
+   
+}
+
 .masthead{
     background-color: #032947;
     position:fixed;
