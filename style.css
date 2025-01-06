@@ -13,7 +13,7 @@ body{
     position: fixed;
 }
 
-main{
+.main{
     display: flex; /* Apply Flexbox */
     flex-direction: column; /* Arrange children in a column */
     justify-content: center; /* Distribute space between children */
@@ -22,8 +22,9 @@ main{
     margin: 0 auto; /* Center the main container */
     background-color: rgba(240, 248, 255, 0.263); /* Optional background color */
     box-shadow: 5px 0 15px -4px rgba(6, 42, 85, 0.8), -5px 0 15px -4px rgba(6, 42, 85, 0.8); /* Optional shadow */
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin-top:70px;
+
+    padding:30px;
 }
 
 .hero-image-container, .news-container {
@@ -59,8 +60,6 @@ main{
     background-size: cover;
     margin:0 auto;
     align-items: center;
-    margin:0 auto;
-    width:98%;
     height:440px;
     border-radius: 20px;
     align-self: center;
@@ -73,10 +72,10 @@ main{
 
 
 
-.cover-wrapper {
-    position: relative; /* Change from absolute to relative */
-    top: auto; /* Remove the top positioning */
-    left: auto; /* Remove the left positioning */
+.hero-image-text{
+    position: relative; 
+    top: auto; 
+    left: auto; 
     max-width: 40% !important;
     margin: 0 auto;
     display: flex;
@@ -86,6 +85,8 @@ main{
     left:20%;
     top:10%
 }
+
+
 
 .mastfoot, .masthead{
     width:70%;
@@ -136,11 +137,14 @@ main{
     background-color: rgb(226, 222, 222);
     color:rgba(39, 45, 45, 0.8);
     border:1px solid rgba(96, 13, 221, 0.407);
-    width:98%;
+    width:100%;
     align-self: center;
     border-radius:15px;
     margin-bottom:1%;
     margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    gap:40px;
 }
 
 .news{
@@ -164,7 +168,7 @@ main{
     padding:1%;
     z-index:20;
     text-align: center;
-    
+    position:static;
 }
 
 .brand-wrapper, .nav-link{
