@@ -190,7 +190,8 @@ body{
 }
 
 .uploaded-date{
-    font-size:80%
+    font-size:70%;
+    font-style: italic;
 }
 
 .news-container{
