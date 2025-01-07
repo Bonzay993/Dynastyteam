@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 html{
     overflow-y: scroll; /* Always shows the scrollbar */
 }
@@ -13,16 +14,17 @@ body, html {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    align-items: center;  
 }
 
 
 
 body{
     background-image: url("./img/site-background.jpeg");
+    background-attachment: fixed; /* Keeps the background image fixed */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
     position: relative;
-    
     min-height: 100%; /* Allow scrolling when content overflows */
     margin: 0;
   
@@ -185,7 +187,6 @@ body{
     border-radius:15px;
     margin-bottom:1%;
     margin:0 auto;
-    min-height:100vh;
 }
 
 .uploaded-date{
@@ -225,7 +226,6 @@ body{
 .youtube-container{
     display:flex;
     flex-flow: column;
-    margin:0 auto;
     justify-content: space-between;
     row-gap: 20px;
 }
@@ -241,7 +241,7 @@ body{
     align-self:center;
     z-index:9999;
     top:0;
-    padding:0.7%;
+    padding:0.5%;
 }
 
 .mastfoot{
