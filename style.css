@@ -153,9 +153,6 @@ body{
     text-align: center;
     text-decoration: none;
     padding:10px;
-    border:none;
-    box-shadow: 1px 1px 10px solid white !important;
-    
 }
 
 .header-join-discord-btn:hover{
