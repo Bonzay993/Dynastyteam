@@ -18,12 +18,12 @@ body, html {
 }
 
 hr {
-    background-color: #ffffff;
+    background-color: #106298;
     overflow: visible;
     text-align: center;
-    height: 5px;
+    padding:0.5px;
     z-index:20;
-    width:50%;
+    width:60%;
 }
   
 
