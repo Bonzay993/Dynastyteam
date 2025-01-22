@@ -17,7 +17,15 @@ body, html {
     align-items: center;  
 }
 
-
+hr {
+    background-color: #ffffff;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    z-index:20;
+    width:50%;
+}
+  
 
 body{
     background-image: url("./img/site-background.jpeg");
@@ -27,6 +35,7 @@ body{
     position: relative;
     min-height: 100%; /* Allow scrolling when content overflows */
     margin: 0;
+    word-spacing: 0.15rem;
   
 }
 
@@ -76,8 +85,7 @@ body{
     background-size: cover;
     margin: 0 auto;
     align-items: center;
-    height: 440px;
-    min-height: 440px;
+    min-height: 540px;
     border-radius: 20px;
     align-self: center;
     border: 1px solid rgb(0, 0, 0);
@@ -93,20 +101,27 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.279); /* Adjust color and opacity */
     z-index: 1; /* Place it below text */
 }
 
 .hero-image-text {
     position: relative;
     z-index: 2; /* Ensure text is above overlay */
-    max-width: 40% !important;
+    max-width: 50% !important;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    left: 20%;
-    top: 10%;
+    gap: 10%;
+    left: 25%;
+    justify-content: center;
+    background-color: rgb(22, 29, 85); /* Adjust color and opacity */
+    height: 100%;
+}
+
+.hero-image-text .lead{
+    width:80%;
+    margin:0 auto;
+    font-weight: 400;
 }
 
 #loadStore {
@@ -136,15 +151,18 @@ body{
 }
 
 .mastfoot, .header{
-    width:70%;
+    width:100%;
     align-items: center;
     margin:0 auto;
     box-shadow:  12px 0 15px -4px rgba(6, 42, 85, 0.8), -12px 0 15px -4px rgba(6, 42, 85, 0.8)
 }
 
 .cover-heading{
-    text-shadow:2px 2px 2px  black
+    font-size:400%;
+    font-weight: 900;
 }
+
+
 
 .header-join-discord-btn{
     background-color: rgb(10, 43, 190);
@@ -158,13 +176,21 @@ body{
 .header-join-discord-btn:hover{
     color:white;
     transform: scale(1.1);
-    
-
 }
 
 .top-nav{
     display:flex;
     justify-content: space-between;
+    align-items: center;
+    max-width:70%;
+    margin:0 auto;
+}
+
+
+.logo{
+    width:50px;
+    height:50px;
+    background-color: white;
 }
 
 
@@ -197,6 +223,7 @@ body{
     flex-direction: column;
     gap:80px;
     width:50%;
+    margin-top:5%;
 }
 
 .news-title-container{
@@ -206,7 +233,6 @@ body{
 .news{
     display:flex;
     flex-direction: column;
-    text-shadow:2px 2px 2px  black
 }
 
 .news-heading{
@@ -219,6 +245,8 @@ body{
 
 .news-description{
     text-align: left;
+    font-size:100%;
+    font-weight:300
 }
 
 .youtube-container{
@@ -228,9 +256,7 @@ body{
     row-gap: 20px;
 }
 
-.news-description{
-    font-size:100%
-}
+
 
 .header{
     background-color: #032947;
