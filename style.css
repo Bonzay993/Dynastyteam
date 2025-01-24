@@ -36,6 +36,7 @@ body{
     min-height: 100%; /* Allow scrolling when content overflows */
     margin: 0;
     word-spacing: 0.15rem;
+    line-height: 2rem;
   
 }
 
@@ -215,6 +216,7 @@ body{
 .uploaded-date{
     font-size:70%;
     font-style: italic;
+    text-align: left;
 }
 
 .news-container{
@@ -222,12 +224,13 @@ body{
     display:flex;
     flex-direction: column;
     gap:80px;
-    width:50%;
     margin-top:5%;
+    margin:0 auto;
 }
 
 .news-title-container{
     text-align: left;
+    margin:0 auto;
 }
 
 .news{
@@ -254,6 +257,8 @@ body{
     flex-flow: column;
     justify-content: space-between;
     row-gap: 20px;
+    width:43%;
+    margin:0 auto;
 }
 
 
