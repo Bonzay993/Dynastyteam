@@ -53,6 +53,44 @@ body{
     padding:20px;
 }
 
+.animated-text {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: var(--animation-delay, 0s); /* Use custom delay if specified */
+  }
+  
+  /* Keyframes for fade and slide up effect */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated-from-right {
+    opacity: 0; /* Start hidden */
+    transform: translateX(50px); /* Start off-screen to the right */
+    animation: slideInFromRight 0.8s ease-out forwards;
+    animation-delay: var(--animation-delay, 0s); /* Use custom delay if specified */
+  }
+  
+  /* Keyframes for sliding in from the right */
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px); /* Start to the right */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at its original position */
+    }
+  }
+
 .hero-image-container, .news-container {
     margin: 0; /* Remove any margins to avoid interference with gap */
 }
